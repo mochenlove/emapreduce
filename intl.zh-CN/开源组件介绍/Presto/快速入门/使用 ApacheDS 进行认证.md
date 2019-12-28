@@ -56,6 +56,7 @@ Presto 可以对接 LDAP，实现用户密码认证。只需要 Coordinator 节�
     
     ## 将证书导入系统证书库，实现自认证
     > keytool -import -file apacheds.cer -alias apacheds -keystore /usr/lib/jvm/java-1.8.0/jre/lib/security/cacerts
+    ## 如果报错提示“java.io.IOException: Keystore was tampered with, or password was incorrect”，输入 changeit，信任证书
     ```
 
 2.  修改配置，启用 LDAPS
